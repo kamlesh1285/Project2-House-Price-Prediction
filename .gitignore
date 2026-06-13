@@ -1,0 +1,19 @@
+# Python virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# ML model files
+models/*.pkl
+
+# React dependencies
+frontend/node_modules/
+
+# Environment files
+.env
+
+# Mac files
+.DS_Store
+.ipynb_checkpoints/
