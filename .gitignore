@@ -5,9 +5,6 @@ venv/
 __pycache__/
 *.pyc
 
-# ML model files
-models/*.pkl
-
 # React dependencies
 frontend/node_modules/
 
@@ -16,4 +13,6 @@ frontend/node_modules/
 
 # Mac files
 .DS_Store
+
+# Jupyter checkpoints
 .ipynb_checkpoints/

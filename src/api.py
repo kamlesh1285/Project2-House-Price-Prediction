@@ -1,7 +1,8 @@
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-import pickle
+import joblib
 import pandas as pd
 from pathlib import Path
 
@@ -28,8 +29,7 @@ app.add_middleware(
 BASE_DIR = Path(__file__).resolve().parent.parent
 MODEL_PATH = BASE_DIR / "models" / "house_price_model.pkl"
 
-with open(MODEL_PATH, "rb") as file:
-    model = pickle.load(file)
+model = joblib.load(MODEL_PATH)
 
 
 # Define input data structure
@@ -72,4 +72,4 @@ def predict(data: HouseData):
     return {
         "predicted_price": float(prediction[0]),
         "price_in_dollars": float(prediction[0] * 100000)
-    }
+    } 
