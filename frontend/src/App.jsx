@@ -44,7 +44,7 @@ function App() {
 
     try {
       const response = await fetch(
-        "http://127.0.0.1:8000/predict",
+        "https://house-price-prediction-api-h488.onrender.com/predict",
         {
           method: "POST",
           headers: {
